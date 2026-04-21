@@ -1,108 +1,1252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>João Correia - Personal Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Correia — Software Engineering Researcher</title>
+  <meta name="description" content="PhD in Computer Science from PUC-Rio. Researcher in Software Dependability, Conversational Agents, and LLMs for Developer Support." />
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/aos.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    :root {
+      --bg:        #f9fafb;
+      --surface:   #ffffff;
+      --border:    #e5e7eb;
+      --navy:      #0f172a;
+      --navy-mid:  #1e3a5f;
+      --accent:    #2563eb;
+      --accent-2:  #7c3aed;
+      --text:      #111827;
+      --muted:     #6b7280;
+      --light:     #f3f4f6;
+      --radius:    12px;
+      --nav-h:     64px;
+      --max-w:     900px;
+      --transition: 0.2s ease;
+    }
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+    html { scroll-behavior: smooth; font-size: 16px; }
 
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">João Correia<span>.</span></a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-				<li class="colorlib-active"><a href="index.html">Home</a></li>
-         		<li ><a href="articles-prof.html">Professional</a></li>
-         		<li ><a href="articles-weather.html">Personal - Weather</a></li>
-         		<li ><a href="articles-diverse.html">Personal - Diverse</a></li>
-          	<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-			<div class="colorlib-footer">
-				
-				<script type="text/javascript" src="https://www.counters-free.net/count/32iv"></script><br>
- 				<a href='http://www.counter-zaehler.de/'>http://counter-zaehler.de</a> <script type='text/javascript' src='https://whomania.com/ctr?id=98fdeffee967cb16f72d74125819c82a18e9ae6e'></script>
-				
-				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<ul>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin"></i></a></li>
-				</ul>
-			</div>
-		</aside> <!-- END COLORLIB-ASIDE -->
-		<div id="colorlib-main">
-			<div class="hero-wrap hero-wrap-2 js-fullheight" style="background-color: #f2f2f2;" data-stellar-background-ratio="0.5">
-				<div class="overlay"></div>
-				<div class="js-fullheight d-flex justify-content-center align-items-center">
-					<div class="col-md-8 text text-center">
-						<div class="img mb-4" style="background-image: url(images/author.jpg);"></div>
-						<div class="desc">
-							<h2 class="subheading">Hello I'm</h2>
-							<h1 class="mb-4">João Correia</h1>
-							<p class="mb-4"> Currently I am PhD student at Pontifical Catholic University of Rio de Janeiro - PUC-Rio, developing research in Software Engineering applied to Artificial Intelligence. I am master in informatics from the Federal University of Alagoas - UFAL (2021) and graduated in Computer Science from the Federal University of Alagoas - UFAL (2019). </p>
-							<ul class="ftco-social mt-3">
-                <li class="ftco-animate"><a href="https://twitter.com/JoaoCorreia__"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/user.joaolucas"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/joaocorreia_/"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href="https://github.com/correiajoao/"><span class="icon-github"></span></a></li>
-              </ul>
-						</div>
-					</div>
-				</div>  
-			</div>
-		</div><!-- END COLORLIB-MAIN -->
-	</div><!-- END COLORLIB-PAGE -->
+    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent-2); }
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    img { max-width: 100%; display: block; }
 
+    /* ─── Nav ───────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.25rem, 5vw, 3rem);
+    }
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
 
-    
-  </body>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--navy); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--navy);
+      font-size: 1.25rem;
+    }
+
+    /* ─── Layout ────────────────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    section { padding: 5rem 0; }
+    section:first-of-type { padding-top: calc(var(--nav-h) + 4rem); }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding-top: var(--nav-h);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .hero-name {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .hero-title strong { color: var(--text); font-weight: 600; }
+
+    .hero-bio {
+      font-size: 0.975rem;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-ghost:hover {
+      background: var(--light);
+      border-color: #d1d5db;
+      color: var(--navy);
+      transform: translateY(-1px);
+    }
+
+    /* Profile photo */
+    .hero-photo-wrap {
+      position: relative;
+    }
+
+    .hero-photo {
+      width: clamp(160px, 22vw, 220px);
+      height: clamp(160px, 22vw, 220px);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--surface);
+      box-shadow: 0 0 0 3px var(--accent), 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.3rem 0.65rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border: 2px solid var(--surface);
+      white-space: nowrap;
+    }
+
+    /* ─── About ─────────────────────────────────────────────────── */
+    #about { background: var(--bg); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.975rem;
+      margin-bottom: 1rem;
+      line-height: 1.85;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .fact-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .fact-icon {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-top: 0.1rem;
+      flex-shrink: 0;
+    }
+
+    .fact-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .fact-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* ─── Research Interests ─────────────────────────────────────── */
+    #research { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .tag-blue  { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .tag-purple{ background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+    .tag-green { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+    .tag-orange{ background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+    .tag-teal  { background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4; }
+    .tag-pink  { background: #fdf2f8; color: #9d174d; border: 1px solid #f9a8d4; }
+
+    .tag:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    /* ─── Publications ───────────────────────────────────────────── */
+    #publications { background: var(--bg); }
+
+    .pub-year-group { margin-bottom: 2.5rem; }
+    .pub-year-group:last-child { margin-bottom: 0; }
+
+    .pub-year {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .pub-year::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .pub-item {
+      padding: 1.1rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.75rem;
+      transition: box-shadow var(--transition), border-color var(--transition);
+    }
+    .pub-item:last-child { margin-bottom: 0; }
+    .pub-item:hover {
+      border-color: #c7d2fe;
+      box-shadow: 0 4px 16px rgba(37,99,235,0.08);
+    }
+
+    .pub-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-venue-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .badge-conf     { background: #eff6ff; color: #1e40af; }
+    .badge-journal  { background: #f0fdf4; color: #166534; }
+    .badge-workshop { background: #fdf4ff; color: #7e22ce; }
+    .badge-ext      { background: #fff7ed; color: #9a3412; }
+
+    .pub-title {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .pub-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+    .pub-meta em { font-style: normal; font-weight: 500; color: var(--text); }
+
+    /* ─── Education ──────────────────────────────────────────────── */
+    #education { background: var(--surface); border-top: 1px solid var(--border); }
+
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.45rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--border));
+      border-radius: 2px;
+    }
+
+    .tl-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-dot {
+      position: absolute;
+      left: -1.55rem;
+      top: 0.35rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .tl-dot.secondary {
+      background: var(--border);
+      box-shadow: 0 0 0 2px #d1d5db;
+    }
+
+    .tl-period {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .tl-degree {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .tl-institution {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-detail {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tl-thesis {
+      margin-top: 0.5rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ─── Software ───────────────────────────────────────────────── */
+    #software { background: var(--bg); border-top: 1px solid var(--border); }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .sw-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .sw-card:hover {
+      transform: translateY(-3px);
+      border-color: #c7d2fe;
+      box-shadow: 0 8px 24px rgba(37,99,235,0.1);
+    }
+
+    .sw-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .sw-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+    }
+
+    .sw-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0.85rem;
+    }
+
+    .sw-meta {
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ─── Contact ────────────────────────────────────────────────── */
+    #contact {
+      background: var(--navy);
+      color: #e2e8f0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    #contact .section-label { color: #60a5fa; }
+    #contact .section-title { color: #f1f5f9; border-color: rgba(255,255,255,0.12); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-size: 0.975rem;
+      color: #94a3b8;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      transition: all var(--transition);
+    }
+    .contact-link:hover {
+      background: rgba(37,99,235,0.2);
+      border-color: rgba(37,99,235,0.5);
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    .contact-link i {
+      font-size: 1.1rem;
+      color: #60a5fa;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .contact-link-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-link-value {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      background: #0a0f1a;
+      color: #475569;
+      text-align: center;
+      padding: 1.75rem;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    /* ─── Mobile ─────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; }
+      .nav-toggle { display: block; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+      .hero-photo-wrap { order: -1; display: flex; justify-content: center; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-bio { margin: 0 auto 2rem; }
+      .hero-links { justify-content: center; }
+
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; }
+      .about-facts { order: -1; }
+
+      section { padding: 3.5rem 0; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name { font-size: 2.2rem; }
+      .software-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Scroll reveal ───────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">João<span>.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Researcher &amp; Software Engineer</div>
+        <h1 class="hero-name">João<br/>Correia</h1>
+        <p class="hero-title">
+          <strong>PhD in Computer Science</strong> &nbsp;·&nbsp;
+          PUC-Rio &amp; Northern Arizona University
+        </p>
+        <p class="hero-bio">
+          I research how AI-powered conversational agents can help developers
+          navigate software dependability challenges. My work bridges empirical
+          software engineering, large language models, and developer tooling.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:jcorreia@inf.puc-rio.br" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/correiajoao" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://orcid.org/0009-0005-1040-2577" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-brands fa-orcid"></i> ORCID
+          </a>
+          <a href="https://scholar.google.com" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-solid fa-graduation-cap"></i> Scholar
+          </a>
+          <a href="https://linkedin.com/in/joaolmc" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <img
+          src="images/profile.jpg"
+          alt="João Correia"
+          class="hero-photo"
+          width="220" height="220"
+        />
+        <span class="hero-badge">PhD · 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Biography</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>
+            I am a postdoctoral researcher at the <strong>Pontifical Catholic University of
+            Rio de Janeiro (PUC-Rio)</strong>, where I also completed my PhD in Computer
+            Science in 2025, advised by Prof. Alessandro Garcia and co-advised by
+            Prof. Rafael Maiani de Mello.
+          </p>
+          <p>
+            My doctoral research investigated how conversational agents powered by
+            large language models can guide developers in addressing software
+            dependability issues — from exception handling to robustness
+            improvements. As part of my PhD, I undertook a research exchange at
+            <strong>Northern Arizona University (NAU)</strong>, supervised by
+            Profs. Igor Steinmacher &amp; Marco Gerosa.
+          </p>
+          <p>
+            Before my doctorate, I earned a Master's degree from the
+            <strong>Federal University of Alagoas (UFAL)</strong>, where I studied
+            the challenges and practices of Brazilian data scientists in machine
+            learning model development.
+          </p>
+          <p>
+            I am also affiliated with the <strong>MAssiSo</strong> project
+            (FAPERJ-funded), focused on AI-assisted modernization of legacy software
+            systems toward disruptive technologies such as microservices.
+          </p>
+        </div>
+
+        <div class="about-facts">
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <div class="fact-label">Institution</div>
+              <div class="fact-value">PUC-Rio — Postdoctoral Researcher</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="fact-label">Location</div>
+              <div class="fact-value">Rio de Janeiro, Brazil</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-flask"></i></div>
+            <div>
+              <div class="fact-label">Research Group</div>
+              <div class="fact-value">Software Engineering Lab (LES), PUC-Rio</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <div class="fact-label">Scholarship</div>
+              <div class="fact-value">CNPq — Technological Industrial Development Level A</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-language"></i></div>
+            <div>
+              <div class="fact-label">Languages</div>
+              <div class="fact-value">Portuguese (native) · English (proficient) · Spanish (intermediate)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research Interests ────────────────────────────────────── -->
+  <section id="research">
+    <div class="container">
+      <p class="section-label">Focus Areas</p>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="tags-wrap reveal">
+        <span class="tag tag-blue"><i class="fa-solid fa-robot"></i> Conversational Agents &amp; LLMs</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-shield-halved"></i> Software Dependability</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-code"></i> Empirical Software Engineering</span>
+        <span class="tag tag-green"><i class="fa-solid fa-wrench"></i> Developer Support Tools</span>
+        <span class="tag tag-orange"><i class="fa-solid fa-bug"></i> Exception Handling &amp; Robustness</span>
+        <span class="tag tag-pink"><i class="fa-solid fa-recycle"></i> Code Refactoring</span>
+        <span class="tag tag-blue"><i class="fa-solid fa-chart-line"></i> Machine Learning Practices</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-server"></i> Legacy Software Modernization</span>
+        <span class="tag tag-green"><i class="fa-solid fa-magnifying-glass-chart"></i> Mining Software Repositories</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-comments"></i> Pull Request Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Publications ──────────────────────────────────────────── -->
+  <section id="publications">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Publications</h2>
+
+      <!-- 2026 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2026</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICSE</span>
+            <div class="pub-title">A Comparison of Conversational Models and Humans in Answering Technical Questions: the Firefox Case</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE/ACM International Conference on Software Engineering</em> · 2026
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2025</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-journal">Journal</span>
+            <div class="pub-title">Evaluating the Noise Tolerance of Cloud NLP Services Across Amazon, Microsoft, and Google</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Computers in Industry</em> · Elsevier · 2025
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SBQS</span>
+            <div class="pub-title">PRemo: A Dataset of Emotions Found on Pull Request Discussions</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Brazilian Symposium on Software Engineering</em> · 2025
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ISSRE</span>
+            <div class="pub-title">Case Study: Applying Fuzzing to REST APIs in a Large-Scale Industrial Setting</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Symposium on Software Reliability Engineering</em> · 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2024</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-journal">Journal</span>
+            <div class="pub-title">Understanding Developers' Discussions and Perceptions on Non-functional Requirements: The Case of the Spring Ecosystem</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>ACM on Software Engineering</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SCAM</span>
+            <div class="pub-title">On the Investigation of Exception Pull Request Characteristics: Exploring the Apache Ecosystem</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Conference on Source Code Analysis and Manipulation</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-workshop">AIware</span>
+            <div class="pub-title">Unveiling the Potential of a Conversational Agent in Developer Support: Insights from Mozilla's PDF.js Project</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>ACM International Conference on AI-Powered Software (AIware)</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">MSR</span>
+            <div class="pub-title">Don't Forget the Exception!: Considering Robustness Changes to Identify Design Problems</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE/ACM International Conference on Mining Software Repositories</em> · 2024
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2021</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICSME</span>
+            <div class="pub-title">Look Ahead! Revealing Complete Composite Refactorings and their Smelliness Effects</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Conference on Software Maintenance and Evolution</em> · 2021
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2020</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICPC</span>
+            <div class="pub-title">How Does Incomplete Composite Refactoring Affect Internal Quality Attributes?</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>International Conference on Program Comprehension</em> · 2020
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SBQS</span>
+            <div class="pub-title">Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Brazilian Symposium on Software Quality</em> · 2020
+          </div>
+        </div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="pub-year-group reveal">
+        <div class="pub-year">2018</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-ext">ICSE ext.</span>
+            <div class="pub-title">The Buggy Side of Code Refactoring</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>International Conference on Software Engineering — Extended Abstract</em> · 2018
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Education ─────────────────────────────────────────────── -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline reveal">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2025 — Present</div>
+          <div class="tl-degree">Postdoctoral Researcher</div>
+          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2021 — 2025</div>
+          <div class="tl-degree">PhD in Computer Science</div>
+          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Alessandro Garcia · Co-advised by Prof. Rafael Maiani de Mello<br/>
+            Research exchange at <strong>Northern Arizona University (NAU)</strong>, supervised by Profs. Igor Steinmacher &amp; Marco Gerosa · CNPq Fellowship
+          </div>
+          <div class="tl-thesis">
+            Thesis: "Exploring Conversational Agents for Developer Guidance on Software Dependability Issues"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2019 — 2021</div>
+          <div class="tl-degree">MSc in Computer Science</div>
+          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Baldoino Fonseca dos Santos Neto · Co-advised by Prof. Rafael Maiani de Mello · CAPES Fellowship
+          </div>
+          <div class="tl-thesis">
+            Dissertation: "Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2015 — 2019</div>
+          <div class="tl-degree">BSc in Computer Science</div>
+          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Baldoino Fonseca dos Santos Neto
+          </div>
+          <div class="tl-thesis">
+            Undergraduate thesis: "Reproducing Algorithms for Bug Insertion Point Detection"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot secondary"></div>
+          <div class="tl-period">2011 — 2014</div>
+          <div class="tl-degree">Technical Course in Informatics</div>
+          <div class="tl-institution">Federal Institute of Alagoas (IFAL), Campus Palmeira dos Índios, Brazil</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Software ───────────────────────────────────────────────── -->
+  <section id="software">
+    <div class="container">
+      <p class="section-label">Tools &amp; Registrations</p>
+      <h2 class="section-title">Software</h2>
+      <div class="software-grid reveal">
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="sw-name">SGA — Tourism Attraction Management</div>
+          <div class="sw-desc">
+            A management system for tourism attractions with integrated features
+            for accessibility and visitor experience.
+          </div>
+          <div class="sw-meta">INPI · BR512020001028-8 · 2020</div>
+        </div>
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-universal-access"></i></div>
+          <div class="sw-name">TATU — Assistive Technology for Tourism</div>
+          <div class="sw-desc">
+            Mobile applications (iOS &amp; Android) for visually impaired and deaf
+            visitors at museums, featuring audio descriptions and accessibility features.
+          </div>
+          <div class="sw-meta">INPI · BR512020001032-6 · 2020</div>
+        </div>
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="sw-name">JMT — Multi-language Mining Tool</div>
+          <div class="sw-desc">
+            A multi-language tool for mining code elements impacted by software
+            revisions, supporting empirical studies on code evolution.
+          </div>
+          <div class="sw-meta">Open source · 2022</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid reveal">
+        <div class="contact-intro">
+          <p>
+            I'm always open to discussing research collaborations, academic
+            visits, or opportunities in software engineering research and
+            AI-powered developer tooling. Feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:jcorreia@inf.puc-rio.br" class="contact-link">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-value">jcorreia@inf.puc-rio.br</div>
+            </div>
+          </a>
+          <a href="https://github.com/correiajoao" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-value">github.com/correiajoao</div>
+            </div>
+          </a>
+          <a href="https://orcid.org/0009-0005-1040-2577" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-brands fa-orcid"></i>
+            <div>
+              <div class="contact-link-label">ORCID</div>
+              <div class="contact-link-value">0009-0005-1040-2577</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/joaolmc" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-value">linkedin.com/in/joaolmc</div>
+            </div>
+          </a>
+          <a href="http://lattes.cnpq.br/4700444931437626" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-solid fa-id-card"></i>
+            <div>
+              <div class="contact-link-label">Lattes CV</div>
+              <div class="contact-link-value">cnpq.br · ID 4700444931437626</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2026 João Lucas Marques Correia &nbsp;·&nbsp; Built with care</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const icon = toggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Close nav on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        const icon = toggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      });
+    });
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('.nav-links a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          links.forEach(l => {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
 </html>
