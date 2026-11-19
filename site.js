@@ -16,16 +16,20 @@ navToggle.addEventListener('click', () => {
 });
 
 navLinks.addEventListener('click', event => {
-  const link = event.target.closest('a');
-  if (!link) return;
-
-  if (link.id === 'languageSwitch') {
-    link.hash = window.location.hash;
-  }
+  if (!event.target.closest('a')) return;
 
   if (navLinks.classList.contains('open')) navToggle.focus();
   setMenuOpen(false);
   classesMenu.open = false;
+});
+
+document.querySelectorAll('.language-switch a').forEach(link => {
+  function copySection() {
+    link.hash = window.location.hash;
+  }
+
+  copySection();
+  window.addEventListener('hashchange', copySection);
 });
 
 document.addEventListener('click', event => {

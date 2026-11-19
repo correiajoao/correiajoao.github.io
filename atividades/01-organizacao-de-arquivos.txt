@@ -1,0 +1,15 @@
+Atividade 1 — Organização de arquivos (exemplo)
+
+1. Crie uma pasta chamada Informatica. Dentro dela, crie as subpastas Textos e Imagens.
+2. Crie um arquivo chamado anotacoes.txt na pasta Textos. Escreva duas frases sobre como organizar arquivos facilita encontrá-los.
+3. Faça uma captura de tela que mostre a estrutura de pastas criada.
+
+Para concluir o exercício, confira se a captura mostra as duas subpastas e se o arquivo está dentro de Textos.
+
+Activity 1 — Organizing files (example)
+
+1. Create a folder named Computing. Inside it, create two subfolders named Text and Images.
+2. Create a file named notes.txt in the Text folder. Write two sentences about how organizing files makes them easier to find.
+3. Take a screenshot showing the folder structure you created.
+
+To finish the exercise, check that the screenshot shows both subfolders and that the file is inside Text.

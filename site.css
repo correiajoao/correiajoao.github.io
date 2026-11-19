@@ -46,6 +46,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   padding: 0 clamp(1.25rem, 5vw, 3rem);
 }
 
@@ -75,6 +76,30 @@ nav {
 .classes-menu summary:hover,
 .classes-menu summary.active,
 .nav-links a.active { color: var(--navy); }
+
+.nav-controls,
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.language-switch a {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.language-switch a:hover,
+.language-switch a[aria-current="page"] {
+  background: var(--light);
+  border-color: var(--border);
+}
 
 .nav-toggle {
   display: none;
@@ -698,7 +723,7 @@ footer {
   .js .nav-links:not(.open) { display: none; }
   .nav-links a, .classes-menu summary { font-size: 1rem; }
   .js .nav-toggle { display: block; }
-  html:not(.js) nav { position: static; height: auto; padding-block: 1rem; }
+  html:not(.js) nav { position: static; height: auto; flex-wrap: wrap; padding-block: 1rem; }
   html:not(.js) .nav-links { position: static; flex-wrap: wrap; flex-direction: row; padding: 0; box-shadow: none; border: 0; }
   .classes-menu .classes-submenu { position: static; box-shadow: none; margin-top: 0.5rem; }
 
