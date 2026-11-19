@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Correia — Computing Professor at IFAL</title>
+  <meta name="description" content="Computing professor at the Federal Institute of Alagoas (IFAL) and software engineering researcher." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../site.css" />
+  <link rel="alternate" hreflang="pt-BR" href="../" />
+  <link rel="alternate" hreflang="en" href="./" />
+  <link rel="alternate" hreflang="x-default" href="../" />
+</head>
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-logo">João<span>.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li>
+        <details class="classes-menu" id="classesMenu">
+          <summary>Classes</summary>
+          <ul class="classes-submenu">
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#activities">Activities</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="../" id="languageSwitch" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+    </ul>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true">☰</span>
+    </button>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Computing Professor</div>
+        <h1 class="hero-name">João<br/>Correia</h1>
+        <p class="hero-title">
+          <strong>Federal Institute of Alagoas (IFAL)</strong>
+        </p>
+        <p class="hero-bio">
+          I research how AI-powered conversational agents can help developers
+          navigate software dependability challenges. My work bridges empirical
+          software engineering, large language models, and developer tooling.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:jcorreia@inf.puc-rio.br" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/correiajoao" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/joaolmarquesc/" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <img
+          src="../images/profile.jpeg"
+          alt="João Correia"
+          class="hero-photo"
+          width="220" height="220"
+        />
+        <span class="hero-badge">PhD · 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Biography</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I teach computing at the <strong>Federal Institute of Alagoas (IFAL)</strong>.
+            I completed my PhD in Computer Science at <strong>PUC-Rio</strong> in 2025,
+            advised by Prof. Alessandro Garcia and co-advised by Prof. Rafael Maiani de Mello.
+          </p>
+          <p>
+            My dissertation received the <strong>Best PhD Dissertation in Software Engineering Award</strong> at SBES 2026, in the Software Engineering Theses and Dissertations Competition (CTD-ES) for work defended in Brazil.
+            <a href="https://www.ppgi.ufrj.br/2026/09/13/destaques-no-congresso-brasileiro-de-engenharia-de-software/">Award announcement</a>.
+          </p>
+          <p>
+            My doctoral research investigated how conversational agents powered by
+            large language models can guide developers in addressing software
+            dependability issues — from exception handling to robustness
+            improvements. As part of my PhD, I undertook a research exchange at
+            <strong>Northern Arizona University (NAU)</strong>, supervised by
+            Profs. Igor Steinmacher &amp; Marco Gerosa.
+          </p>
+          <p>
+            Before my doctorate, I earned a Master's degree from the
+            <strong>Federal University of Alagoas (UFAL)</strong>, where I studied
+            the challenges and practices of Brazilian data scientists in machine
+            learning model development.
+          </p>
+        </div>
+
+        <div class="about-facts">
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <div class="fact-label">Institution</div>
+              <div class="fact-value">Federal Institute of Alagoas (IFAL)</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="fact-label">Location</div>
+              <div class="fact-value">Maceió, Brazil</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-flask"></i></div>
+            <div>
+              <div class="fact-label">Research Group</div>
+              <div class="fact-value">OPUS - LES - PUC-Rio</div>
+            </div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-icon"><i class="fa-solid fa-language"></i></div>
+            <div>
+              <div class="fact-label">Languages</div>
+              <div class="fact-value">Portuguese (native) · English (proficient) · Spanish (intermediate)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="container">
+      <h2 class="section-title">Classes</h2>
+      <div class="class-resources">
+        <article id="documents">
+          <h3>Documents</h3>
+          <p>No class documents have been posted yet.</p>
+        </article>
+        <article id="activities">
+          <h3>Activities</h3>
+          <p>No class activities have been posted yet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research Interests ────────────────────────────────────── -->
+  <section id="research">
+    <div class="container">
+      <p class="section-label">Focus Areas</p>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="tags-wrap">
+        <span class="tag tag-blue"><i class="fa-solid fa-robot"></i> Conversational Agents &amp; LLMs</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-shield-halved"></i> Software Dependability</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-code"></i> Empirical Software Engineering</span>
+        <span class="tag tag-green"><i class="fa-solid fa-wrench"></i> Developer Support Tools</span>
+        <span class="tag tag-orange"><i class="fa-solid fa-bug"></i> Exception Handling &amp; Robustness</span>
+        <span class="tag tag-pink"><i class="fa-solid fa-recycle"></i> Code Refactoring</span>
+        <span class="tag tag-blue"><i class="fa-solid fa-chart-line"></i> Machine Learning Practices</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-server"></i> Legacy Software Modernization</span>
+        <span class="tag tag-green"><i class="fa-solid fa-magnifying-glass-chart"></i> Mining Software Repositories</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-comments"></i> Pull Request Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Publications ──────────────────────────────────────────── -->
+  <section id="publications">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Publications</h2>
+
+      <!-- 2026 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2026</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICSE</span>
+            <div class="pub-title">A Comparison of Conversational Models and Humans in Answering Technical Questions: the Firefox Case</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE/ACM International Conference on Software Engineering</em> · 2026
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2025</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-journal">Journal</span>
+            <div class="pub-title">Evaluating the Noise Tolerance of Cloud NLP Services Across Amazon, Microsoft, and Google</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Computers in Industry</em> · Elsevier · 2025
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SBQS</span>
+            <div class="pub-title">PRemo: A Dataset of Emotions Found on Pull Request Discussions</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Brazilian Symposium on Software Engineering</em> · 2025
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ISSRE</span>
+            <div class="pub-title">Case Study: Applying Fuzzing to REST APIs in a Large-Scale Industrial Setting</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Symposium on Software Reliability Engineering</em> · 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2024</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-journal">Journal</span>
+            <div class="pub-title">Understanding Developers' Discussions and Perceptions on Non-functional Requirements: The Case of the Spring Ecosystem</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>ACM on Software Engineering</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SCAM</span>
+            <div class="pub-title">On the Investigation of Exception Pull Request Characteristics: Exploring the Apache Ecosystem</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Conference on Source Code Analysis and Manipulation</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-workshop">AIware</span>
+            <div class="pub-title">Unveiling the Potential of a Conversational Agent in Developer Support: Insights from Mozilla's PDF.js Project</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>ACM International Conference on AI-Powered Software (AIware)</em> · 2024
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">MSR</span>
+            <div class="pub-title">Don't Forget the Exception!: Considering Robustness Changes to Identify Design Problems</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE/ACM International Conference on Mining Software Repositories</em> · 2024
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2021</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICSME</span>
+            <div class="pub-title">Look Ahead! Revealing Complete Composite Refactorings and their Smelliness Effects</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>IEEE International Conference on Software Maintenance and Evolution</em> · 2021
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2020</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">ICPC</span>
+            <div class="pub-title">How Does Incomplete Composite Refactoring Affect Internal Quality Attributes?</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>International Conference on Program Comprehension</em> · 2020
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-conf">SBQS</span>
+            <div class="pub-title">Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>Brazilian Symposium on Software Quality</em> · 2020
+          </div>
+        </div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="pub-year-group">
+        <div class="pub-year">2018</div>
+
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-venue-badge badge-ext">ICSE ext.</span>
+            <div class="pub-title">The Buggy Side of Code Refactoring</div>
+          </div>
+          <div class="pub-meta">
+            João L. M. Correia et al. ·
+            <em>International Conference on Software Engineering — Extended Abstract</em> · 2018
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Education ─────────────────────────────────────────────── -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">Started in 2025</div>
+          <div class="tl-degree">Postdoctoral Research</div>
+          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2021 — 2025</div>
+          <div class="tl-degree">PhD in Computer Science</div>
+          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Alessandro Garcia · Co-advised by Prof. Rafael Maiani de Mello<br/>
+            Research exchange at <strong>Northern Arizona University (NAU)</strong>, supervised by Profs. Igor Steinmacher &amp; Marco Gerosa · CNPq Fellowship
+          </div>
+          <div class="tl-thesis">
+            Thesis: "Exploring Conversational Agents for Developer Guidance on Software Dependability Issues"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2019 — 2021</div>
+          <div class="tl-degree">MSc in Computer Science</div>
+          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Baldoino Fonseca dos Santos Neto · Co-advised by Prof. Rafael Maiani de Mello · CAPES Fellowship
+          </div>
+          <div class="tl-thesis">
+            Dissertation: "Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">2015 — 2019</div>
+          <div class="tl-degree">BSc in Computer Science</div>
+          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-detail">
+            Advised by Prof. Baldoino Fonseca dos Santos Neto
+          </div>
+          <div class="tl-thesis">
+            Undergraduate thesis: "Reproducing Algorithms for Bug Insertion Point Detection"
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot secondary"></div>
+          <div class="tl-period">2011 — 2014</div>
+          <div class="tl-degree">Technical Course in Informatics</div>
+          <div class="tl-institution">Federal Institute of Alagoas (IFAL), Campus Palmeira dos Índios, Brazil</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Software ───────────────────────────────────────────────── -->
+  <section id="software">
+    <div class="container">
+      <p class="section-label">Tools &amp; Registrations</p>
+      <h2 class="section-title">Software</h2>
+      <div class="software-grid">
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="sw-name">SGA — Tourism Attraction Management</div>
+          <div class="sw-desc">
+            A management system for tourism attractions with integrated features
+            for accessibility and visitor experience.
+          </div>
+          <div class="sw-meta">INPI · BR512020001028-8 · 2020</div>
+        </div>
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-universal-access"></i></div>
+          <div class="sw-name">TATU — Assistive Technology for Tourism</div>
+          <div class="sw-desc">
+            Mobile applications (iOS &amp; Android) for visually impaired and deaf
+            visitors at museums, featuring audio descriptions and accessibility features.
+          </div>
+          <div class="sw-meta">INPI · BR512020001032-6 · 2020</div>
+        </div>
+
+        <div class="sw-card">
+          <div class="sw-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="sw-name">JMT — Multi-language Mining Tool</div>
+          <div class="sw-desc">
+            A multi-language tool for mining code elements impacted by software
+            revisions, supporting empirical studies on code evolution.
+          </div>
+          <div class="sw-meta">Open source · 2022</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <p>
+            I'm always open to discussing research collaborations, academic
+            visits, or opportunities in software engineering research and
+            AI-powered developer tooling. Feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:jcorreia@inf.puc-rio.br" class="contact-link">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-value">jcorreia@inf.puc-rio.br</div>
+            </div>
+          </a>
+          <a href="https://github.com/correiajoao" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-value">github.com/correiajoao</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/joaolmarquesc/" class="contact-link" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-value">linkedin.com/in/joaolmarquesc</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2026 João Lucas Marques Correia</p>
+  </footer>
+
+  <script src="../class-links.js" defer></script>
+  <script src="../site.js" defer></script>
+</body>
+</html>

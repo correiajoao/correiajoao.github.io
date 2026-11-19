@@ -1,0 +1,4 @@
+const classLinks = {
+  documents: [],
+  activities: [],
+};

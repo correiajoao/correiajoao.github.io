@@ -1,721 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>João Correia — Software Engineering Researcher</title>
-  <meta name="description" content="PhD in Computer Science from PUC-Rio. Researcher in Software Dependability, Conversational Agents, and LLMs for Developer Support." />
+  <title>João Correia — Professor de Informática no IFAL</title>
+  <meta name="description" content="Professor de Informática no Instituto Federal de Alagoas (IFAL) e pesquisador em Engenharia de Software." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <style>
-    /* ─── Reset & Base ─────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #f9fafb;
-      --surface:   #ffffff;
-      --border:    #e5e7eb;
-      --navy:      #0f172a;
-      --navy-mid:  #1e3a5f;
-      --accent:    #2563eb;
-      --accent-2:  #7c3aed;
-      --text:      #111827;
-      --muted:     #6b7280;
-      --light:     #f3f4f6;
-      --radius:    12px;
-      --nav-h:     64px;
-      --max-w:     900px;
-      --transition: 0.2s ease;
-    }
-
-    html { scroll-behavior: smooth; font-size: 16px; }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
-    a:hover { color: var(--accent-2); }
-
-    img { max-width: 100%; display: block; }
-
-    /* ─── Nav ───────────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      height: var(--nav-h);
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 clamp(1.25rem, 5vw, 3rem);
-    }
-
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-    .nav-logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: color var(--transition);
-    }
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--navy); }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--navy);
-      font-size: 1.25rem;
-    }
-
-    /* ─── Layout ────────────────────────────────────────────────── */
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
-    }
-
-    section { padding: 5rem 0; }
-    section:first-of-type { padding-top: calc(var(--nav-h) + 4rem); }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.03em;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid var(--border);
-    }
-
-    /* ─── Hero ──────────────────────────────────────────────────── */
-    #hero {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding-top: var(--nav-h);
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      align-items: center;
-      width: 100%;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-
-    .hero-name {
-      font-size: clamp(2.4rem, 6vw, 3.6rem);
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      font-weight: 400;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-    .hero-title strong { color: var(--text); font-weight: 600; }
-
-    .hero-bio {
-      font-size: 0.975rem;
-      color: var(--muted);
-      max-width: 540px;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.55rem 1.1rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: all var(--transition);
-      cursor: pointer;
-      text-decoration: none;
-      border: 1.5px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-    .btn-primary:hover {
-      background: #1d4ed8;
-      border-color: #1d4ed8;
-      color: #fff;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(37,99,235,0.35);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-    .btn-ghost:hover {
-      background: var(--light);
-      border-color: #d1d5db;
-      color: var(--navy);
-      transform: translateY(-1px);
-    }
-
-    /* Profile photo */
-    .hero-photo-wrap {
-      position: relative;
-    }
-
-    .hero-photo {
-      width: clamp(160px, 22vw, 220px);
-      height: clamp(160px, 22vw, 220px);
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 25%;
-      border: 4px solid var(--surface);
-      box-shadow: 0 0 0 3px var(--accent), 0 20px 60px rgba(0,0,0,0.15);
-    }
-
-    .hero-badge {
-      position: absolute;
-      bottom: 6px;
-      right: 6px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 999px;
-      padding: 0.3rem 0.65rem;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      border: 2px solid var(--surface);
-      white-space: nowrap;
-    }
-
-    /* ─── About ─────────────────────────────────────────────────── */
-    #about { background: var(--bg); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      font-size: 0.975rem;
-      margin-bottom: 1rem;
-      line-height: 1.85;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-
-    .about-facts {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .fact-row {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 1rem 1.25rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .fact-icon {
-      font-size: 1.1rem;
-      color: var(--accent);
-      margin-top: 0.1rem;
-      flex-shrink: 0;
-    }
-
-    .fact-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
-    }
-
-    .fact-value {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.4;
-    }
-
-    /* ─── Research Interests ─────────────────────────────────────── */
-    #research { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-
-    .tags-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      transition: all var(--transition);
-    }
-
-    .tag-blue  { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-    .tag-purple{ background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
-    .tag-green { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
-    .tag-orange{ background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
-    .tag-teal  { background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4; }
-    .tag-pink  { background: #fdf2f8; color: #9d174d; border: 1px solid #f9a8d4; }
-
-    .tag:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-
-    /* ─── Publications ───────────────────────────────────────────── */
-    #publications { background: var(--bg); }
-
-    .pub-year-group { margin-bottom: 2.5rem; }
-    .pub-year-group:last-child { margin-bottom: 0; }
-
-    .pub-year {
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .pub-year::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .pub-item {
-      padding: 1.1rem 1.25rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-bottom: 0.75rem;
-      transition: box-shadow var(--transition), border-color var(--transition);
-    }
-    .pub-item:last-child { margin-bottom: 0; }
-    .pub-item:hover {
-      border-color: #c7d2fe;
-      box-shadow: 0 4px 16px rgba(37,99,235,0.08);
-    }
-
-    .pub-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .pub-venue-badge {
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-
-    .badge-conf     { background: #eff6ff; color: #1e40af; }
-    .badge-journal  { background: #f0fdf4; color: #166534; }
-    .badge-workshop { background: #fdf4ff; color: #7e22ce; }
-    .badge-ext      { background: #fff7ed; color: #9a3412; }
-
-    .pub-title {
-      font-size: 0.94rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.4;
-      flex: 1;
-    }
-
-    .pub-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.25rem;
-    }
-    .pub-meta em { font-style: normal; font-weight: 500; color: var(--text); }
-
-    /* ─── Education ──────────────────────────────────────────────── */
-    #education { background: var(--surface); border-top: 1px solid var(--border); }
-
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0.45rem;
-      top: 0.5rem;
-      bottom: 0.5rem;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent), var(--border));
-      border-radius: 2px;
-    }
-
-    .tl-item {
-      position: relative;
-      padding-bottom: 2rem;
-    }
-    .tl-item:last-child { padding-bottom: 0; }
-
-    .tl-dot {
-      position: absolute;
-      left: -1.55rem;
-      top: 0.35rem;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 2px solid var(--surface);
-      box-shadow: 0 0 0 2px var(--accent);
-    }
-
-    .tl-dot.secondary {
-      background: var(--border);
-      box-shadow: 0 0 0 2px #d1d5db;
-    }
-
-    .tl-period {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.2rem;
-    }
-
-    .tl-degree {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.15rem;
-    }
-
-    .tl-institution {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-    }
-
-    .tl-detail {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .tl-thesis {
-      margin-top: 0.5rem;
-      padding: 0.6rem 0.85rem;
-      background: var(--light);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    /* ─── Software ───────────────────────────────────────────────── */
-    #software { background: var(--bg); border-top: 1px solid var(--border); }
-
-    .software-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .sw-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.4rem;
-      transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
-    }
-    .sw-card:hover {
-      transform: translateY(-3px);
-      border-color: #c7d2fe;
-      box-shadow: 0 8px 24px rgba(37,99,235,0.1);
-    }
-
-    .sw-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .sw-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.3rem;
-    }
-
-    .sw-desc {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 0.85rem;
-    }
-
-    .sw-meta {
-      font-size: 0.73rem;
-      font-weight: 600;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    /* ─── Contact ────────────────────────────────────────────────── */
-    #contact {
-      background: var(--navy);
-      color: #e2e8f0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    #contact .section-label { color: #60a5fa; }
-    #contact .section-title { color: #f1f5f9; border-color: rgba(255,255,255,0.12); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .contact-intro {
-      font-size: 0.975rem;
-      color: #94a3b8;
-      line-height: 1.8;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.25rem;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      color: #e2e8f0;
-      font-size: 0.9rem;
-      transition: all var(--transition);
-    }
-    .contact-link:hover {
-      background: rgba(37,99,235,0.2);
-      border-color: rgba(37,99,235,0.5);
-      color: #fff;
-      transform: translateX(4px);
-    }
-
-    .contact-link i {
-      font-size: 1.1rem;
-      color: #60a5fa;
-      width: 20px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .contact-link-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #64748b;
-      margin-bottom: 0.15rem;
-    }
-
-    .contact-link-value {
-      font-size: 0.88rem;
-      color: #e2e8f0;
-      font-weight: 500;
-    }
-
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0a0f1a;
-      color: #475569;
-      text-align: center;
-      padding: 1.75rem;
-      font-size: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.04);
-    }
-
-    /* ─── Mobile ─────────────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: var(--nav-h);
-        left: 0; right: 0;
-        background: rgba(255,255,255,0.97);
-        backdrop-filter: blur(12px);
-        flex-direction: column;
-        padding: 1.5rem 2rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1rem; }
-      .nav-toggle { display: block; }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-      }
-      .hero-photo-wrap { order: -1; display: flex; justify-content: center; }
-      .hero-eyebrow { justify-content: center; }
-      .hero-bio { margin: 0 auto 2rem; }
-      .hero-links { justify-content: center; }
-
-      .about-grid,
-      .contact-grid { grid-template-columns: 1fr; }
-      .about-facts { order: -1; }
-
-      section { padding: 3.5rem 0; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-name { font-size: 2.2rem; }
-      .software-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ─── Scroll reveal ───────────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="alternate" hreflang="pt-BR" href="./" />
+  <link rel="alternate" hreflang="en" href="en/" />
+  <link rel="alternate" hreflang="x-default" href="./" />
 </head>
 <body>
 
   <!-- ── Navigation ────────────────────────────────────────────── -->
-  <nav>
+  <nav aria-label="Navegação principal">
     <div class="nav-logo">João<span>.</span></div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li>
+        <details class="classes-menu" id="classesMenu">
+          <summary>Aulas</summary>
+          <ul class="classes-submenu">
+            <li><a href="#documents">Documentos</a></li>
+            <li><a href="#activities">Atividades</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#research">Pesquisa</a></li>
+      <li><a href="#publications">Publicações</a></li>
+      <li><a href="#education">Formação</a></li>
       <li><a href="#software">Software</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contato</a></li>
+      <li><a href="en/" id="languageSwitch" hreflang="en" lang="en">English</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <i class="fa-solid fa-bars"></i>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir ou fechar menu" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true">☰</span>
     </button>
   </nav>
 
@@ -723,20 +51,19 @@
   <section id="hero">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">Researcher &amp; Software Engineer</div>
+        <div class="hero-eyebrow">Professor de Informática</div>
         <h1 class="hero-name">João<br/>Correia</h1>
         <p class="hero-title">
-          <strong>PhD in Computer Science</strong> &nbsp;·&nbsp;
-          PUC-Rio &amp; Northern Arizona University
+          <strong>Instituto Federal de Alagoas (IFAL)</strong>
         </p>
         <p class="hero-bio">
-          I research how AI-powered conversational agents can help developers
-          navigate software dependability challenges. My work bridges empirical
-          software engineering, large language models, and developer tooling.
+          Pesquiso como agentes conversacionais baseados em IA podem ajudar
+          desenvolvedores a lidar com desafios de confiabilidade de software. Meu trabalho reúne
+          engenharia de software empírica, modelos de linguagem de grande escala e ferramentas de apoio ao desenvolvimento.
         </p>
         <div class="hero-links">
           <a href="mailto:jcorreia@inf.puc-rio.br" class="btn btn-primary">
-            <i class="fa-solid fa-envelope"></i> Email
+            <i class="fa-solid fa-envelope"></i> E-mail
           </a>
           <a href="https://github.com/correiajoao" class="btn btn-ghost" target="_blank" rel="noopener">
             <i class="fa-brands fa-github"></i> GitHub
@@ -754,7 +81,7 @@
           class="hero-photo"
           width="220" height="220"
         />
-        <span class="hero-badge">PhD · 2025</span>
+        <span class="hero-badge">Doutorado · 2025</span>
       </div>
     </div>
   </section>
@@ -762,29 +89,29 @@
   <!-- ── About ─────────────────────────────────────────────────── -->
   <section id="about">
     <div class="container">
-      <p class="section-label">Biography</p>
-      <h2 class="section-title">About Me</h2>
-      <div class="about-grid reveal">
+      <p class="section-label">Biografia</p>
+      <h2 class="section-title">Sobre mim</h2>
+      <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a postdoctoral researcher at the <strong>Pontifical Catholic University of
-            Rio de Janeiro (PUC-Rio)</strong>, where I also completed my PhD in Computer
-            Science in 2025, advised by Prof. Alessandro Garcia and co-advised by
-            Prof. Rafael Maiani de Mello.
+            Sou professor de Informática no <strong>Instituto Federal de Alagoas (IFAL)</strong>.
+            Concluí o doutorado em Ciência da Computação na <strong>PUC-Rio</strong> em 2025,
+            sob orientação do Prof. Alessandro Garcia e coorientação do Prof. Rafael Maiani de Mello.
           </p>
           <p>
-            My doctoral research investigated how conversational agents powered by
-            large language models can guide developers in addressing software
-            dependability issues — from exception handling to robustness
-            improvements. As part of my PhD, I undertook a research exchange at
-            <strong>Northern Arizona University (NAU)</strong>, supervised by
-            Profs. Igor Steinmacher &amp; Marco Gerosa.
+            Minha tese recebeu o <strong>Prêmio de Melhor Tese de Doutorado em Engenharia de Software</strong> no Concurso de Teses e Dissertações em Engenharia de Software (CTD-ES) do SBES 2026, que avaliou trabalhos defendidos no Brasil.
+            <a href="https://www.ppgi.ufrj.br/2026/09/13/destaques-no-congresso-brasileiro-de-engenharia-de-software/">Anúncio do prêmio</a>.
           </p>
           <p>
-            Before my doctorate, I earned a Master's degree from the
-            <strong>Federal University of Alagoas (UFAL)</strong>, where I studied
-            the challenges and practices of Brazilian data scientists in machine
-            learning model development.
+            No doutorado, investiguei como agentes conversacionais que usam modelos de linguagem de grande escala
+            podem orientar desenvolvedores na resolução de problemas de confiabilidade de software,
+            do tratamento de exceções a melhorias de robustez. Durante o doutorado, fiz um intercâmbio de pesquisa na
+            <strong>Northern Arizona University (NAU)</strong>, sob supervisão dos professores Igor Steinmacher e Marco Gerosa.
+          </p>
+          <p>
+            Antes do doutorado, concluí o mestrado na <strong>Universidade Federal de Alagoas (UFAL)</strong>,
+            onde estudei os desafios e as práticas de cientistas de dados brasileiros no desenvolvimento
+            de modelos de aprendizado de máquina.
           </p>
         </div>
 
@@ -792,29 +119,29 @@
           <div class="fact-row">
             <div class="fact-icon"><i class="fa-solid fa-building-columns"></i></div>
             <div>
-              <div class="fact-label">Institution</div>
-              <div class="fact-value">PUC-Rio — Postdoctoral Researcher</div>
+              <div class="fact-label">Instituição</div>
+              <div class="fact-value">Instituto Federal de Alagoas (IFAL)</div>
             </div>
           </div>
           <div class="fact-row">
             <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
-              <div class="fact-label">Location</div>
-              <div class="fact-value">Maceió, Brazil</div>
+              <div class="fact-label">Localização</div>
+              <div class="fact-value">Maceió, Brasil</div>
             </div>
           </div>
           <div class="fact-row">
             <div class="fact-icon"><i class="fa-solid fa-flask"></i></div>
             <div>
-              <div class="fact-label">Research Group</div>
+              <div class="fact-label">Grupo de pesquisa</div>
               <div class="fact-value">OPUS - LES - PUC-Rio</div>
             </div>
           </div>
           <div class="fact-row">
             <div class="fact-icon"><i class="fa-solid fa-language"></i></div>
             <div>
-              <div class="fact-label">Languages</div>
-              <div class="fact-value">Portuguese (native) · English (proficient) · Spanish (intermediate)</div>
+              <div class="fact-label">Idiomas</div>
+              <div class="fact-value">Português (nativo) · Inglês (proficiente) · Espanhol (intermediário)</div>
             </div>
           </div>
         </div>
@@ -822,22 +149,38 @@
     </div>
   </section>
 
-  <!-- ── Research Interests ────────────────────────────────────── -->
+  <section id="classes">
+    <div class="container">
+      <h2 class="section-title">Aulas</h2>
+      <div class="class-resources">
+        <article id="documents">
+          <h3>Documentos</h3>
+          <p>Ainda não há documentos publicados.</p>
+        </article>
+        <article id="activities">
+          <h3>Atividades</h3>
+          <p>Ainda não há atividades publicadas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Interesses de pesquisa ────────────────────────────────────── -->
   <section id="research">
     <div class="container">
-      <p class="section-label">Focus Areas</p>
-      <h2 class="section-title">Research Interests</h2>
-      <div class="tags-wrap reveal">
-        <span class="tag tag-blue"><i class="fa-solid fa-robot"></i> Conversational Agents &amp; LLMs</span>
-        <span class="tag tag-purple"><i class="fa-solid fa-shield-halved"></i> Software Dependability</span>
-        <span class="tag tag-teal"><i class="fa-solid fa-code"></i> Empirical Software Engineering</span>
-        <span class="tag tag-green"><i class="fa-solid fa-wrench"></i> Developer Support Tools</span>
-        <span class="tag tag-orange"><i class="fa-solid fa-bug"></i> Exception Handling &amp; Robustness</span>
-        <span class="tag tag-pink"><i class="fa-solid fa-recycle"></i> Code Refactoring</span>
-        <span class="tag tag-blue"><i class="fa-solid fa-chart-line"></i> Machine Learning Practices</span>
-        <span class="tag tag-purple"><i class="fa-solid fa-server"></i> Legacy Software Modernization</span>
-        <span class="tag tag-green"><i class="fa-solid fa-magnifying-glass-chart"></i> Mining Software Repositories</span>
-        <span class="tag tag-teal"><i class="fa-solid fa-comments"></i> Pull Request Analysis</span>
+      <p class="section-label">Áreas de atuação</p>
+      <h2 class="section-title">Interesses de pesquisa</h2>
+      <div class="tags-wrap">
+        <span class="tag tag-blue"><i class="fa-solid fa-robot"></i> Agentes conversacionais e LLMs</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-shield-halved"></i> Confiabilidade de software</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-code"></i> Engenharia de software empírica</span>
+        <span class="tag tag-green"><i class="fa-solid fa-wrench"></i> Ferramentas de apoio ao desenvolvimento</span>
+        <span class="tag tag-orange"><i class="fa-solid fa-bug"></i> Tratamento de exceções e robustez</span>
+        <span class="tag tag-pink"><i class="fa-solid fa-recycle"></i> Refatoração de código</span>
+        <span class="tag tag-blue"><i class="fa-solid fa-chart-line"></i> Práticas de aprendizado de máquina</span>
+        <span class="tag tag-purple"><i class="fa-solid fa-server"></i> Modernização de software legado</span>
+        <span class="tag tag-green"><i class="fa-solid fa-magnifying-glass-chart"></i> Mineração de repositórios de software</span>
+        <span class="tag tag-teal"><i class="fa-solid fa-comments"></i> Análise de pull requests</span>
       </div>
     </div>
   </section>
@@ -845,167 +188,167 @@
   <!-- ── Publications ──────────────────────────────────────────── -->
   <section id="publications">
     <div class="container">
-      <p class="section-label">Selected Work</p>
-      <h2 class="section-title">Publications</h2>
+      <p class="section-label">Trabalhos selecionados</p>
+      <h2 class="section-title">Publicações</h2>
 
       <!-- 2026 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2026</div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">ICSE</span>
-            <div class="pub-title">A Comparison of Conversational Models and Humans in Answering Technical Questions: the Firefox Case</div>
+            <div class="pub-title" lang="en">A Comparison of Conversational Models and Humans in Answering Technical Questions: the Firefox Case</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>IEEE/ACM International Conference on Software Engineering</em> · 2026
+            <em lang="en">IEEE/ACM International Conference on Software Engineering</em> · 2026
           </div>
         </div>
       </div>
 
       <!-- 2025 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2025</div>
 
         <div class="pub-item">
           <div class="pub-header">
-            <span class="pub-venue-badge badge-journal">Journal</span>
-            <div class="pub-title">Evaluating the Noise Tolerance of Cloud NLP Services Across Amazon, Microsoft, and Google</div>
+            <span class="pub-venue-badge badge-journal">Periódico</span>
+            <div class="pub-title" lang="en">Evaluating the Noise Tolerance of Cloud NLP Services Across Amazon, Microsoft, and Google</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>Computers in Industry</em> · Elsevier · 2025
+            <em lang="en">Computers in Industry</em> · Elsevier · 2025
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">SBQS</span>
-            <div class="pub-title">PRemo: A Dataset of Emotions Found on Pull Request Discussions</div>
+            <div class="pub-title" lang="en">PRemo: A Dataset of Emotions Found on Pull Request Discussions</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>Brazilian Symposium on Software Engineering</em> · 2025
+            <em lang="en">Brazilian Symposium on Software Engineering</em> · 2025
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">ISSRE</span>
-            <div class="pub-title">Case Study: Applying Fuzzing to REST APIs in a Large-Scale Industrial Setting</div>
+            <div class="pub-title" lang="en">Case Study: Applying Fuzzing to REST APIs in a Large-Scale Industrial Setting</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>IEEE International Symposium on Software Reliability Engineering</em> · 2025
+            <em lang="en">IEEE International Symposium on Software Reliability Engineering</em> · 2025
           </div>
         </div>
       </div>
 
       <!-- 2024 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2024</div>
 
         <div class="pub-item">
           <div class="pub-header">
-            <span class="pub-venue-badge badge-journal">Journal</span>
-            <div class="pub-title">Understanding Developers' Discussions and Perceptions on Non-functional Requirements: The Case of the Spring Ecosystem</div>
+            <span class="pub-venue-badge badge-journal">Periódico</span>
+            <div class="pub-title" lang="en">Understanding Developers' Discussions and Perceptions on Non-functional Requirements: The Case of the Spring Ecosystem</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>ACM on Software Engineering</em> · 2024
+            <em lang="en">ACM on Software Engineering</em> · 2024
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">SCAM</span>
-            <div class="pub-title">On the Investigation of Exception Pull Request Characteristics: Exploring the Apache Ecosystem</div>
+            <div class="pub-title" lang="en">On the Investigation of Exception Pull Request Characteristics: Exploring the Apache Ecosystem</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>IEEE International Conference on Source Code Analysis and Manipulation</em> · 2024
+            <em lang="en">IEEE International Conference on Source Code Analysis and Manipulation</em> · 2024
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-workshop">AIware</span>
-            <div class="pub-title">Unveiling the Potential of a Conversational Agent in Developer Support: Insights from Mozilla's PDF.js Project</div>
+            <div class="pub-title" lang="en">Unveiling the Potential of a Conversational Agent in Developer Support: Insights from Mozilla's PDF.js Project</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>ACM International Conference on AI-Powered Software (AIware)</em> · 2024
+            <em lang="en">ACM International Conference on AI-Powered Software (AIware)</em> · 2024
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">MSR</span>
-            <div class="pub-title">Don't Forget the Exception!: Considering Robustness Changes to Identify Design Problems</div>
+            <div class="pub-title" lang="en">Don't Forget the Exception!: Considering Robustness Changes to Identify Design Problems</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>IEEE/ACM International Conference on Mining Software Repositories</em> · 2024
+            <em lang="en">IEEE/ACM International Conference on Mining Software Repositories</em> · 2024
           </div>
         </div>
       </div>
 
       <!-- 2021 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2021</div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">ICSME</span>
-            <div class="pub-title">Look Ahead! Revealing Complete Composite Refactorings and their Smelliness Effects</div>
+            <div class="pub-title" lang="en">Look Ahead! Revealing Complete Composite Refactorings and their Smelliness Effects</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>IEEE International Conference on Software Maintenance and Evolution</em> · 2021
+            <em lang="en">IEEE International Conference on Software Maintenance and Evolution</em> · 2021
           </div>
         </div>
       </div>
 
       <!-- 2020 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2020</div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">ICPC</span>
-            <div class="pub-title">How Does Incomplete Composite Refactoring Affect Internal Quality Attributes?</div>
+            <div class="pub-title" lang="en">How Does Incomplete Composite Refactoring Affect Internal Quality Attributes?</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>International Conference on Program Comprehension</em> · 2020
+            <em lang="en">International Conference on Program Comprehension</em> · 2020
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-conf">SBQS</span>
-            <div class="pub-title">Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development</div>
+            <div class="pub-title" lang="en">Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>Brazilian Symposium on Software Quality</em> · 2020
+            <em lang="en">Brazilian Symposium on Software Quality</em> · 2020
           </div>
         </div>
       </div>
 
       <!-- 2018 -->
-      <div class="pub-year-group reveal">
+      <div class="pub-year-group">
         <div class="pub-year">2018</div>
 
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-venue-badge badge-ext">ICSE ext.</span>
-            <div class="pub-title">The Buggy Side of Code Refactoring</div>
+            <div class="pub-title" lang="en">The Buggy Side of Code Refactoring</div>
           </div>
           <div class="pub-meta">
             João L. M. Correia et al. ·
-            <em>International Conference on Software Engineering — Extended Abstract</em> · 2018
+            <em lang="en">International Conference on Software Engineering — Extended Abstract</em> · 2018
           </div>
         </div>
       </div>
@@ -1016,62 +359,62 @@
   <!-- ── Education ─────────────────────────────────────────────── -->
   <section id="education">
     <div class="container">
-      <p class="section-label">Academic Background</p>
-      <h2 class="section-title">Education</h2>
-      <div class="timeline reveal">
+      <p class="section-label">Trajetória acadêmica</p>
+      <h2 class="section-title">Formação</h2>
+      <div class="timeline">
 
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-period">2025 — Present</div>
-          <div class="tl-degree">Postdoctoral Researcher</div>
-          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+          <div class="tl-period">Início em 2025</div>
+          <div class="tl-degree">Pesquisa de pós-doutorado</div>
+          <div class="tl-institution">Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Brasil</div>
         </div>
 
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-period">2021 — 2025</div>
-          <div class="tl-degree">PhD in Computer Science</div>
-          <div class="tl-institution">Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Brazil</div>
+          <div class="tl-degree">Doutorado em Ciência da Computação</div>
+          <div class="tl-institution">Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Brasil</div>
           <div class="tl-detail">
-            Advised by Prof. Alessandro Garcia · Co-advised by Prof. Rafael Maiani de Mello<br/>
-            Research exchange at <strong>Northern Arizona University (NAU)</strong>, supervised by Profs. Igor Steinmacher &amp; Marco Gerosa · CNPq Fellowship
+            Orientação do Prof. Alessandro Garcia · Coorientação do Prof. Rafael Maiani de Mello<br/>
+            Intercâmbio de pesquisa na <strong>Northern Arizona University (NAU)</strong>, sob supervisão dos professores Igor Steinmacher e Marco Gerosa · Bolsa do CNPq
           </div>
           <div class="tl-thesis">
-            Thesis: "Exploring Conversational Agents for Developer Guidance on Software Dependability Issues"
+            Tese: <span lang="en">"Exploring Conversational Agents for Developer Guidance on Software Dependability Issues"</span>
           </div>
         </div>
 
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-period">2019 — 2021</div>
-          <div class="tl-degree">MSc in Computer Science</div>
-          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-degree">Mestrado em Ciência da Computação</div>
+          <div class="tl-institution">Universidade Federal de Alagoas (UFAL), Brasil</div>
           <div class="tl-detail">
-            Advised by Prof. Baldoino Fonseca dos Santos Neto · Co-advised by Prof. Rafael Maiani de Mello · CAPES Fellowship
+            Orientação do Prof. Baldoino Fonseca dos Santos Neto · Coorientação do Prof. Rafael Maiani de Mello · Bolsa da CAPES
           </div>
           <div class="tl-thesis">
-            Dissertation: "Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development"
+            Dissertação: <span lang="en">"Brazilian Data Scientists: Revealing their Challenges and Practices on Machine Learning Model Development"</span>
           </div>
         </div>
 
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-period">2015 — 2019</div>
-          <div class="tl-degree">BSc in Computer Science</div>
-          <div class="tl-institution">Federal University of Alagoas (UFAL), Brazil</div>
+          <div class="tl-degree">Bacharelado em Ciência da Computação</div>
+          <div class="tl-institution">Universidade Federal de Alagoas (UFAL), Brasil</div>
           <div class="tl-detail">
-            Advised by Prof. Baldoino Fonseca dos Santos Neto
+            Orientação do Prof. Baldoino Fonseca dos Santos Neto
           </div>
           <div class="tl-thesis">
-            Undergraduate thesis: "Reproducing Algorithms for Bug Insertion Point Detection"
+            Trabalho de conclusão de curso: <span lang="en">"Reproducing Algorithms for Bug Insertion Point Detection"</span>
           </div>
         </div>
 
         <div class="tl-item">
           <div class="tl-dot secondary"></div>
           <div class="tl-period">2011 — 2014</div>
-          <div class="tl-degree">Technical Course in Informatics</div>
-          <div class="tl-institution">Federal Institute of Alagoas (IFAL), Campus Palmeira dos Índios, Brazil</div>
+          <div class="tl-degree">Curso Técnico em Informática</div>
+          <div class="tl-institution">Instituto Federal de Alagoas (IFAL), Campus Palmeira dos Índios, Brasil</div>
         </div>
 
       </div>
@@ -1081,38 +424,38 @@
   <!-- ── Software ───────────────────────────────────────────────── -->
   <section id="software">
     <div class="container">
-      <p class="section-label">Tools &amp; Registrations</p>
+      <p class="section-label">Ferramentas e registros</p>
       <h2 class="section-title">Software</h2>
-      <div class="software-grid reveal">
+      <div class="software-grid">
 
         <div class="sw-card">
           <div class="sw-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-          <div class="sw-name">SGA — Tourism Attraction Management</div>
+          <div class="sw-name">SGA — Gestão de atrativos turísticos</div>
           <div class="sw-desc">
-            A management system for tourism attractions with integrated features
-            for accessibility and visitor experience.
+            Sistema de gestão de atrativos turísticos com recursos de acessibilidade
+            e de apoio à experiência dos visitantes.
           </div>
           <div class="sw-meta">INPI · BR512020001028-8 · 2020</div>
         </div>
 
         <div class="sw-card">
           <div class="sw-icon"><i class="fa-solid fa-universal-access"></i></div>
-          <div class="sw-name">TATU — Assistive Technology for Tourism</div>
+          <div class="sw-name">TATU — Tecnologia assistiva para turismo</div>
           <div class="sw-desc">
-            Mobile applications (iOS &amp; Android) for visually impaired and deaf
-            visitors at museums, featuring audio descriptions and accessibility features.
+            Aplicativos para iOS e Android voltados a visitantes surdos ou com deficiência visual
+            em museus, com audiodescrição e outros recursos de acessibilidade.
           </div>
           <div class="sw-meta">INPI · BR512020001032-6 · 2020</div>
         </div>
 
         <div class="sw-card">
           <div class="sw-icon"><i class="fa-solid fa-code-branch"></i></div>
-          <div class="sw-name">JMT — Multi-language Mining Tool</div>
+          <div class="sw-name">JMT — Ferramenta de mineração para múltiplas linguagens</div>
           <div class="sw-desc">
-            A multi-language tool for mining code elements impacted by software
-            revisions, supporting empirical studies on code evolution.
+            Ferramenta que identifica elementos de código afetados por revisões de software em múltiplas linguagens,
+            para apoiar estudos empíricos sobre a evolução do código.
           </div>
-          <div class="sw-meta">Open source · 2022</div>
+          <div class="sw-meta">Código aberto · 2022</div>
         </div>
 
       </div>
@@ -1122,14 +465,14 @@
   <!-- ── Contact ────────────────────────────────────────────────── -->
   <section id="contact">
     <div class="container">
-      <p class="section-label">Get in Touch</p>
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-grid reveal">
+      <p class="section-label">Fale comigo</p>
+      <h2 class="section-title">Contato</h2>
+      <div class="contact-grid">
         <div class="contact-intro">
           <p>
-            I'm always open to discussing research collaborations, academic
-            visits, or opportunities in software engineering research and
-            AI-powered developer tooling. Feel free to reach out.
+            Estou aberto a conversar sobre colaborações de pesquisa, visitas acadêmicas
+            e oportunidades em engenharia de software e ferramentas de desenvolvimento baseadas em IA.
+            Entre em contato.
           </p>
         </div>
 
@@ -1137,7 +480,7 @@
           <a href="mailto:jcorreia@inf.puc-rio.br" class="contact-link">
             <i class="fa-solid fa-envelope"></i>
             <div>
-              <div class="contact-link-label">Email</div>
+              <div class="contact-link-label">E-mail</div>
               <div class="contact-link-value">jcorreia@inf.puc-rio.br</div>
             </div>
           </a>
@@ -1162,59 +505,10 @@
 
   <!-- ── Footer ─────────────────────────────────────────────────── -->
   <footer>
-    <p>&copy; 2026 João Lucas Marques Correia &nbsp;·&nbsp; Built with care</p>
+    <p>&copy; 2026 João Lucas Marques Correia</p>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      const icon = toggle.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-xmark');
-    });
-
-    // Close nav on link click (mobile)
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        const icon = toggle.querySelector('i');
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-xmark');
-      });
-    });
-
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const links = document.querySelectorAll('.nav-links a');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          links.forEach(l => {
-            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
-          });
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(s => observer.observe(s));
-
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    revealEls.forEach(el => revealObserver.observe(el));
-  </script>
+  <script src="class-links.js" defer></script>
+  <script src="site.js" defer></script>
 </body>
 </html>
