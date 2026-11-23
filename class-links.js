@@ -2,9 +2,9 @@ const classLinks = {
   documents: [],
   activities: [
     {
-      pt: 'Atividade 1 — Organização de arquivos (exemplo)',
-      en: 'Activity 1 — Organizing files (example)',
-      url: 'atividades/01-organizacao-de-arquivos.txt',
+      pt: 'Exercício avaliativo — 23 de novembro de 2026',
+      en: 'Graded exercise — November 23, 2026',
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSdQTT_qIO2v9yYrMKQt5WOs2s0NIjv7RWYTe2XYe1MGm3DysQ/viewform?usp=publish-editor',
     },
   ],
 };
